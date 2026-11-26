@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Presentasi Aplikasi Web HTML Bimbingan Konseling SMP Negeri 56 Jakarta - BK 56 CARE. Media informasi dan sosialisasi layanan BK modern, interaktif, dan mudah diakses.">
+<meta name="keywords" content="BK SMP Negeri 56 Jakarta, Bimbingan Konseling, BK 56 CARE, Presentasi BK, Aplikasi Web HTML BK, Layanan BK Jakarta">
+<meta name="author" content="Tim BK SMP Negeri 56 Jakarta">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="PRESENTASI APLIKASI WEB HTML BK SMP NEGERI 56 JAKARTA">
+<meta property="og:description" content="BK 56 CARE - Platform presentasi dan informasi digital layanan Bimbingan Konseling SMP Negeri 56 Jakarta.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<title>PRESENTASI APLIKASI WEB HTML BK SMP NEGERI 56 JAKARTA | BK 56 CARE</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: 'Segoe UI', Tahoma, sans-serif;
+background:
+radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6) 0%, transparent 50%),
+radial-gradient(circle at 80% 80%, rgba(255,255,255,0.4) 0%, transparent 50%),
+linear-gradient(135deg, #eef2f7 0%, #dce6f2 100%);
+background-attachment: fixed;
+min-height: 100vh;
+color: #1a1a1a;
+padding: 20px;
+line-height: 1.6;
+}
+.container {
+max-width: 1100px; margin: 0 auto;
+background: #ffffff; border-radius: 16px;
+box-shadow: 0 20px 60px rgba(11, 61, 145, 0.15);
+overflow: hidden; border: 1px solid #e0e7ef;
+}
+header {
+position: relative;
+background:
+radial-gradient(circle at 15% 20%, rgba(30, 144, 255, 0.35) 0%, transparent 45%),
+radial-gradient(circle at 85% 80%, rgba(0, 212, 255, 0.25) 0%, transparent 50%),
+linear-gradient(135deg, #001233 0%, #001a4d 45%, #0a2463 100%);
+color: #fff;
+padding: 10px 20px 60px;
+text-align: center;
+overflow: hidden;
+box-shadow: inset 0 -2px 20px rgba(0, 212, 255, 0.15);
+}
+header::before {
+content: '';
+position: absolute;
+top: -50%; left: -50%;
+width: 200%; height: 200%;
+background: radial-gradient(circle, rgba(30, 144, 255, 0.08) 0%, transparent 60%);
+animation: headerGlow 8s ease-in-out infinite;
+pointer-events: none;
+}
+@keyframes headerGlow {
+0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+50% { transform: translate(5%, 5%) scale(1.1); opacity: 1; }
+}
+.header-content {
+position: relative;
+z-index: 2;
+padding: 10px 10px 0;
+}
+header h1 {
+font-size: 1.55rem;
+letter-spacing: 1.2px;
+text-shadow: 0 2px 8px rgba(0, 212, 255, 0.5), 0 0 20px rgba(30, 144, 255, 0.3);
+font-weight: 800;
+color: #ffffff;
+line-height: 1.35;
+text-transform: uppercase;
+}
+header h1 .highlight {
+color: #00d4ff;
+text-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 0 2px 4px rgba(0,0,0,0.3);
+}
+header p {
+font-size: 0.98rem;
+margin-top: 8px;
+color: #cfe4ff;
+font-weight: 500;
+letter-spacing: 0.5px;
+}
+header .header-badge {
+display: inline-block;
+margin-top: 10px;
+padding: 5px 14px;
+background: rgba(0, 212, 255, 0.15);
+border: 1px solid rgba(0, 212, 255, 0.4);
+border-radius: 20px;
+font-size: 0.78rem;
+font-weight: 700;
+color: #00d4ff;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+backdrop-filter: blur(4px);
+}
+.wave-separator {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 60px;
+line-height: 0;
+z-index: 1;
+}
+.wave-separator svg {
+width: 100%;
+height: 100%;
+display: block;
+}
+.toolbar-wrapper {
+position: relative;
+background: #f5f7fa;
+border-bottom: 1px solid #dde3ec;
+}
+.toolbar {
+display: flex; flex-wrap: wrap; gap: 10px;
+padding: 14px 20px;
+justify-content: center;
+max-height: 500px;
+overflow: hidden;
+transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+opacity: 1;
+}
+.toolbar.hidden {
+max-height: 0; padding-top: 0; padding-bottom: 0;
+opacity: 0; pointer-events: none;
+}
+.toolbar-toggle-btn {
+position: absolute; top: 8px; right: 10px;
+background: linear-gradient(135deg, #001233, #0a2463);
+color: #fff; border: 2px solid #00d4ff;
+padding: 7px 12px; border-radius: 6px; cursor: pointer;
+font-size: 0.8rem; font-weight: 700; z-index: 50;
+box-shadow: 0 3px 8px rgba(0, 18, 51, 0.4);
+transition: 0.2s; display: flex; align-items: center; gap: 6px;
+}
+.toolbar-toggle-btn:hover { background: linear-gradient(135deg, #0a2463, #001233); transform: translateY(-1px); box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3); }
+.toolbar-toggle-btn .arrow { display: inline-block; transition: transform 0.3s ease; font-size: 0.75rem; }
+.toolbar-toggle-btn.collapsed .arrow { transform: rotate(180deg); }
+.btn-primary {
+padding: 11px 18px; font-size: 0.9rem; font-weight: 700;
+border: 2px solid rgba(255,255,255,0.3);
+box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+border-radius: 6px; cursor: pointer; transition: 0.2s;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-edit { background: linear-gradient(135deg, #2e7d32, #1b5e20); color: #fff; }
+.btn-edit.active { background: linear-gradient(135deg, #ef6c00, #e65100); }
+.btn-push { background: linear-gradient(135deg, #6a1b9a, #4a148c); color: #fff; }
+.btn-pull { background: linear-gradient(135deg, #00c853, #009624); color: #fff; }
+.btn-toc { background: linear-gradient(135deg, #ffc107, #ffa000); color: #001233; }
+.btn-secondary {
+background: #0a2463; color: #fff; border: none;
+padding: 8px 13px; border-radius: 6px; cursor: pointer;
+font-size: 0.8rem; font-weight: 600; transition: 0.2s;
+}
+.btn-secondary:hover { background: #001233; transform: translateY(-2px); }
+.btn-danger { background: #c62828; }
+.btn-danger:hover { background: #8e0000; }
+.toolbar-separator {
+width: 1px; background: #c5cdd8; margin: 0 6px; align-self: stretch;
+}
+body.focus-mode .toolbar-wrapper,
+body.focus-mode .nav-bar { display: none; }
+body.focus-mode .slide { min-height: 70vh; }
+.slide {
+display: none; padding: 45px 50px; min-height: 540px;
+animation: fadeIn 0.4s ease;
+background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+}
+.slide.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.slide h2 {
+color: #001233; border-bottom: 4px solid #ffc107;
+padding-bottom: 12px; margin-bottom: 22px;
+font-size: 1.9rem; font-weight: 700;
+}
+.slide h3 {
+color: #0a2463; margin: 18px 0 10px;
+font-size: 1.25rem; font-weight: 700;
+border-left: 4px solid #ffc107; padding-left: 12px;
+}
+.slide p { line-height: 1.8; font-size: 1.05rem; color: #1a1a1a; margin-bottom: 12px; text-align: justify; }
+.slide ul, .slide ol { padding-left: 28px; margin-bottom: 14px; }
+.slide li { line-height: 1.8; font-size: 1.05rem; margin-bottom: 8px; }
+.slide li::marker { color: #0a2463; font-weight: 700; }
+.cover {
+text-align: center; padding: 60px 40px;
+background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+border-radius: 12px; border: 2px solid #90caf9;
+}
+.cover h2 { font-size: 2.1rem; border: none; color: #001233; }
+.cover p { font-size: 1.15rem; color: #001233; text-align: center; font-weight: 500; }
+.image-slot {
+margin: 25px auto; border: 2px dashed #0a2463; border-radius: 10px;
+padding: 20px; text-align: center; background: #f0f7ff; max-width: 650px;
+}
+.image-slot img { max-width: 100%; max-height: 340px; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
+.image-slot .caption { font-size: 0.9rem; color: #555; margin-top: 10px; font-style: italic; }
+.image-slot input[type="file"] { margin-top: 10px; font-size: 0.85rem; }
+.image-slot .remove-img {
+background: #c62828; color: #fff; border: none;
+padding: 5px 12px; border-radius: 4px; cursor: pointer;
+font-size: 0.78rem; margin-top: 10px; font-weight: 600;
+}
+.link-images-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 35px 0 15px; }
+.link-image-card {
+background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+border: 2px solid #0a2463; border-radius: 12px;
+padding: 18px; box-shadow: 0 4px 12px rgba(10,36,99,0.12);
+transition: 0.3s; display: flex; flex-direction: column;
+align-items: center; text-align: center;
+}
+.link-image-card.left { justify-self: end; }
+.link-image-card.right { justify-self: start; }
+.link-image-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(10,36,99,0.2); border-color: #001233; }
+.link-image-card .card-label { font-size: 0.8rem; font-weight: 700; color: #ef6c00; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.link-image-card .card-title { font-size: 1.05rem; font-weight: 700; color: #001233; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #ffc107; width: 100%; }
+.link-image-card .card-preview { width: 100%; min-height: 180px; display: flex; align-items: center; justify-content: center; background: #f0f7ff; border-radius: 8px; padding: 10px; margin-bottom: 12px; overflow: hidden; }
+.link-image-card .card-preview img { max-width: 100%; max-height: 200px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.link-image-card .card-preview .placeholder { color: #888; font-size: 0.9rem; font-style: italic; padding: 20px; }
+.link-image-card .card-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; width: 100%; }
+.link-image-card .card-caption { font-size: 0.85rem; color: #555; margin-top: 10px; font-style: italic; padding: 4px; width: 100%; }
+.link-video-wrapper { max-width: 720px; margin: 35px auto 15px; background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%); border: 2px solid #0a2463; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(10,36,99,0.12); text-align: center; }
+.link-video-wrapper .card-label { font-size: 0.85rem; font-weight: 700; color: #ef6c00; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.link-video-wrapper .card-title { font-size: 1.15rem; font-weight: 700; color: #001233; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #ffc107; }
+.link-video-wrapper .video-preview { width: 100%; min-height: 220px; background: #000; border-radius: 8px; overflow: hidden; margin-bottom: 12px; display: flex; align-items: center; justify-content: center; }
+.link-video-wrapper .video-preview video { width: 100%; height: auto; max-height: 400px; display: block; background: #000; }
+.link-video-wrapper .video-preview .placeholder { color: #aaa; font-size: 0.95rem; font-style: italic; padding: 40px 20px; }
+.link-video-wrapper .card-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 10px; }
+.link-video-wrapper .card-caption { font-size: 0.9rem; color: #555; font-style: italic; padding: 4px; }
+.card-btn { background: #0a2463; color: #fff; border: none; padding: 7px 14px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: 0.2s; }
+.card-btn:hover { background: #001233; transform: translateY(-1px); }
+.card-btn.danger { background: #c62828; }
+.card-btn.danger:hover { background: #8e0000; }
+[contenteditable="true"] { outline: 1px dashed transparent; transition: 0.2s; padding: 4px; border-radius: 4px; }
+[contenteditable="true"]:hover { outline: 1px dashed #0a2463; background: #fffde7; }
+[contenteditable="true"]:focus { outline: 2px solid #0a2463; background: #fffde7; }
+.edit-mode [contenteditable] { background: #fff9c4; outline: 1px dashed #ef6c00; }
+.toc-list { list-style: none; padding: 0; }
+.toc-list li { padding: 12px 18px; margin: 8px 0; background: linear-gradient(90deg, #e3f2fd, #ffffff); border-left: 6px solid #0a2463; border-radius: 6px; cursor: pointer; transition: 0.2s; font-weight: 700; color: #001233; font-size: 1.05rem; }
+.toc-list li:hover { background: linear-gradient(90deg, #bbdefb, #e3f2fd); transform: translateX(8px); }
+.nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 16px 30px; background: #f5f7fa; border-top: 1px solid #dde3ec; }
+.nav-bar button { background: #0a2463; color: #fff; border: none; padding: 11px 22px; border-radius: 6px; cursor: pointer; font-weight: 700; }
+.nav-bar button:hover { background: #001233; }
+.page-indicator { font-weight: 700; color: #001233; font-size: 1rem; }
+footer { text-align: center; padding: 16px; background: #001233; color: #fff; font-size: 0.9rem; }
+.floating-toc { position: fixed; bottom: 25px; right: 25px; background: linear-gradient(135deg, #ffc107, #ffa000); color: #001233; border: 3px solid #001233; padding: 14px 20px; border-radius: 50px; cursor: pointer; font-weight: 800; font-size: 0.95rem; box-shadow: 0 6px 20px rgba(0,18,51,0.35); z-index: 1000; transition: 0.25s; display: flex; align-items: center; gap: 8px; }
+.floating-toc:hover { transform: translateY(-3px) scale(1.05); }
+.floating-focus-btn { position: fixed; bottom: 25px; left: 25px; background: linear-gradient(135deg, #001233, #0a2463); color: #fff; border: 3px solid #ffc107; padding: 14px 18px; border-radius: 50px; cursor: pointer; font-weight: 800; font-size: 0.9rem; box-shadow: 0 6px 20px rgba(0,18,51,0.35); z-index: 1000; transition: 0.25s; display: flex; align-items: center; gap: 8px; }
+.floating-focus-btn:hover { transform: translateY(-3px) scale(1.05); }
+.floating-focus-btn.active { background: linear-gradient(135deg, #ef6c00, #b33f00); }
+.sync-status { position: fixed; top: 20px; right: 20px; background: #fff; border: 2px solid #0a2463; border-radius: 8px; padding: 12px 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; font-size: 0.85rem; font-weight: 600; display: none; animation: slideIn 0.3s ease; max-width: 320px; }
+.sync-status.show { display: block; }
+.sync-status.success { border-color: #2e7d32; color: #2e7d32; }
+.sync-status.error { border-color: #c62828; color: #c62828; }
+.sync-status.loading { border-color: #ef6c00; color: #ef6c00; }
+.sync-status.cloud { border-color: #6a1b9a; color: #6a1b9a; }
+@keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; justify-content: center; align-items: center; }
+.modal-overlay.show { display: flex; }
+.modal { background: #fff; border-radius: 12px; padding: 30px; max-width: 500px; width: 90%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.modal h3 { color: #001233; margin-bottom: 20px; font-size: 1.3rem; border-bottom: 3px solid #ffc107; padding-bottom: 10px; }
+.modal label { display: block; margin-bottom: 6px; font-weight: 600; color: #333; font-size: 0.9rem; }
+.modal input, .modal textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; font-size: 0.95rem; margin-bottom: 15px; font-family: inherit; }
+.modal input:focus, .modal textarea:focus { outline: none; border-color: #0a2463; }
+.modal-hint { background: #e3f2fd; border-left: 4px solid #0a2463; padding: 10px 12px; border-radius: 4px; font-size: 0.85rem; color: #001233; margin-bottom: 15px; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+.info-box { background: #fff3e0; border-left: 4px solid #ef6c00; padding: 12px 16px; border-radius: 6px; margin: 15px 0; font-size: 0.95rem; color: #5d3a00; }
+.info-box b { color: #ef6c00; }
+@media print {
+body { background: #fff; padding: 0; }
+.toolbar-wrapper, .nav-bar, .floating-toc, .floating-focus-btn, .image-slot input, .image-slot .remove-img,
+.card-actions, .modal-overlay, .sync-status { display: none; }
+.slide { display: block !important; page-break-after: always; }
+.link-images-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+.slide { padding: 25px 20px; }
+header h1 { font-size: 1.15rem; }
+header p { font-size: 0.85rem; }
+header .header-badge { font-size: 0.7rem; padding: 4px 10px; }
+.slide h2 { font-size: 1.4rem; }
+.floating-toc { bottom: 15px; right: 15px; padding: 10px 14px; font-size: 0.85rem; }
+.floating-focus-btn { bottom: 15px; left: 15px; padding: 10px 14px; font-size: 0.8rem; }
+.toolbar-toggle-btn { padding: 6px 10px; font-size: 0.75rem; top: 6px; right: 6px; }
+.btn-primary { padding: 9px 12px; font-size: 0.8rem; }
+.link-images-row { grid-template-columns: 1fr; gap: 15px; }
+.link-image-card.left, .link-image-card.right { justify-self: stretch; }
+}
+</style>
+</head>
+<body>
+<button class="floating-toc" onclick="goToTOC()" title="Kembali ke Daftar Isi">
+<span>📑</span><span>Daftar Isi</span>
+</button>
+<div class="sync-status" id="syncStatus"></div>
+<div class="modal-overlay" id="modalOverlay">
+<div class="modal">
+<h3 id="modalTitle">Sematkan Link</h3>
+<div class="modal-hint" id="modalHint">💡 Tempelkan URL dari internet.</div>
+<label>URL Link:</label>
+<input type="url" id="modalUrl" placeholder="https://...">
+<label>Keterangan (Caption):</label>
+<textarea id="modalCaption" rows="3" placeholder="Deskripsi singkat..."></textarea>
+<div class="modal-actions">
+<button class="card-btn danger" onclick="closeModal()">Batal</button>
+<button class="card-btn" onclick="saveLink()" style="background:#2e7d32;">💾 Simpan</button>
+</div>
+</div>
+</div>
+<div class="container">
+<header role="banner" aria-label="Header Presentasi BK SMP Negeri 56 Jakarta">
+<div class="wave-separator" aria-hidden="true">
+<svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15"/>
+<stop offset="50%" style="stop-color:#00d4ff;stop-opacity:0.25"/>
+<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.15"/>
+</linearGradient>
+<linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.35"/>
+<stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.35"/>
+</linearGradient>
+</defs>
+<path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="url(#waveGrad1)"/>
+<path d="M0,80 C240,110 480,50 720,80 C960,110 1200,50 1440,80 L1440,120 L0,120 Z" fill="url(#waveGrad2)"/>
+<path d="M0,100 C240,115 480,85 720,100 C960,115 1200,85 1440,100 L1440,120 L0,120 Z" fill="#ffffff"/>
+</svg>
+</div>
+<div class="header-content">
+<h1>PRESENTASI APLIKASI WEB HTML<br><span class="highlight">BK SMP NEGERI 56 JAKARTA</span></h1>
+<p>Bimbingan Konseling — Presentasi Interaktif Multi Halaman</p>
+<span class="header-badge">★ Unit Bimbingan & Konseling SMPN 56 Jakarta ★</span>
+</div>
+</header>
+<div class="toolbar-wrapper">
+<button class="toolbar-toggle-btn" id="toolbarToggleBtn" onclick="toggleToolbar()" title="Buka/Tutup Menu (T)">
+<span class="arrow">▲</span>
+<span id="toolbarToggleLabel">Tutup Menu</span>
+</button>
+<div class="toolbar" id="toolbar">
+<button class="btn-primary btn-toc" onclick="goToTOC()">📑 Daftar Isi</button>
+<button class="btn-primary btn-edit" id="btnEdit" onclick="toggleEdit()">🖊️ Mode Edit</button>
+<button class="btn-primary btn-push" onclick="pushToSheet()">☁️ Push ke Sheet</button>
+<button class="btn-primary btn-pull" onclick="pullFromSheet()">🔄 Muat dari Sheet</button>
+<div class="toolbar-separator"></div>
+<button class="btn-secondary" onclick="addPage()">➕ Tambah</button>
+<button class="btn-secondary btn-danger" onclick="deletePage()">🗑️ Hapus</button>
+<button class="btn-secondary" onclick="window.print()">🖨️ Cetak</button>
+<button class="btn-secondary btn-danger" onclick="forceReset()" style="background:#880e4f;">🆘 Reset</button>
+</div>
+</div>
+<div id="slidesContainer"></div>
+<div class="nav-bar">
+<button onclick="prevPage()">◀ Sebelumnya</button>
+<span class="page-indicator" id="pageIndicator">Halaman 1 / 1</span>
+<button onclick="nextPage()">Selanjutnya ▶</button>
+</div>
+<footer>© 2026 BK SMP Negeri 56 Jakarta</footer>
+</div>
+<script>
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYwvaHZ6nEHCDn0SGI2MBWA4bN5IMFJ_Ptb8RH9ryxMPzP-npOYyGcolb9SCiAsLwi/exec';
+const defaultPages = [
+{
+title: "COVER", isCover: true,
+content: `
+<h2>PRESENTASI APLIKASI WEB HTML<br>BK SMP NEGERI 56 JAKARTA</h2>
+<p><b>Bimbingan dan Konseling</b></p>
+<p>Tahun Pelajaran 2026 / 2027</p>
+<p><i>Disusun oleh: Tim BK SMP Negeri 56 Jakarta</i></p>
+`,
+},
+{
+title: "DAFTAR ISI",
+content: `
+<h2>📑 DAFTAR ISI</h2>
+<p>Silakan pilih materi yang ingin ditampilkan:</p>
+<ul class="toc-list" id="tocList"></ul>
+<p><i>💡 Tekan tombol <b>"📑 Daftar Isi"</b> di pojok kanan bawah kapan saja untuk kembali ke halaman ini.</i></p>
+`,
+image: "", pageType: "none"
+},
+{
+title: "PENGANTAR",
+content: `
+<h2>PENGANTAR</h2>
+<p>Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa, atas rahmat dan karunia-Nya sehingga presentasi aplikasi web HTML Bimbingan Konseling SMP Negeri 56 Jakarta ini dapat diselesaikan.</p>
+<p>Presentasi ini disusun sebagai media informasi dan sosialisasi mengenai layanan BK yang modern, interaktif, dan mudah diakses oleh siswa, guru, serta orang tua.</p>
+<h3>Sambutan</h3>
+<p>Kami berharap aplikasi ini dapat menjadi sarana pendukung pelayanan BK yang lebih efektif, efisien, dan menyenangkan bagi seluruh warga sekolah.</p>
+`,
+},
+{
+title: "NAMA APLIKASI",
+content: `
+<h2>NAMA APLIKASI</h2>
+<p>Aplikasi ini bernama:</p>
+<h3>📘 "BK 56 CARE"</h3>
+<p><b>(Bimbingan Konseling - Caring, Attentive, Responsive, Empathetic)</b></p>
+<p>Aplikasi berbasis HTML ini dirancang khusus untuk mendukung kegiatan layanan Bimbingan Konseling di SMP Negeri 56 Jakarta.</p>
+<h3>Deskripsi Singkat</h3>
+<p>Merupakan platform presentasi dan informasi digital yang menyajikan materi BK, jadwal konseling, profil konselor, serta program-program layanan secara interaktif.</p>
+`,
+image: "", caption: "",
+pageType: "link-images",
+linkImages: [
+{ id: 'p4_left',  position: 'left',  title: 'Unit Bimbingan & Konseling SMPN 56 Jakarta',  url: '', caption: '' },
+{ id: 'p4_right', position: 'right', title: 'Platform Bimbingan dan Konseling Digital', url: '', caption: '' }
+]
+},
+{
+title: "TUJUAN PEMBUATAN DAN PENYUSUNAN",
+content: `
+<h2>TUJUAN PEMBUATAN DAN PENYUSUNAN</h2>
+<h3>Tujuan Umum</h3>
+<ul>
+<li>Menyediakan media presentasi digital yang modern untuk layanan BK.</li>
+<li>Meningkatkan pemahaman siswa tentang pentingnya layanan BK.</li>
+<li>Mendukung program sekolah berbasis teknologi informasi.</li>
+</ul>
+<h3>Tujuan Khusus</h3>
+<ol>
+<li>Mempermudah penyampaian materi BK kepada siswa.</li>
+<li>Sebagai sarana dokumentasi program kerja BK.</li>
+<li>Meningkatkan citra positif layanan BK di sekolah.</li>
+<li>Media sosialisasi yang dapat diakses kapan saja.</li>
+</ol>
+`,
+image: "", caption: "", pageType: "none"
+},
+{
+title: "PEMBAHASAN",
+content: `
+<h2>PEMBAHASAN</h2>
+<p>Pada bagian ini dijelaskan secara rinci mengenai fitur, manfaat, dan cara penggunaan aplikasi BK 56 CARE.</p>
+<h3>1. Fitur Utama</h3>
+<ul>
+<li>Tampilan interaktif dan responsif</li>
+<li>Multi halaman dengan navigasi mudah</li>
+<li>Dapat diedit langsung di browser</li>
+<li>Card link gambar & video tersinkron cloud</li>
+</ul>
+<h3>2. Manfaat bagi Siswa</h3>
+<p>Siswa dapat mengakses informasi BK dengan lebih menarik, memahami layanan yang tersedia, serta merasa lebih dekat dengan guru BK.</p>
+<h3>3. Manfaat bagi Guru BK</h3>
+<p>Memudahkan penyampaian materi, dokumentasi kegiatan, dan sosialisasi program BK secara digital.</p>
+`,
+image: "", caption: "",
+pageType: "link-video",
+linkVideo: { id: 'p6_video', title: 'Video "Unit Bimbingan & Konseling SMPN 56 Jakarta"', url: '', caption: '' }
+}
+];
+let pages = [];
+let currentSlide = 0;
+let editMode = false;
+let toolbarCollapsed = false;
+let focusMode = false;
+let currentEditTarget = null;
+function normalizePage(p) {
+if (!p || typeof p !== 'object') return null;
+return {
+title: p.title || 'Halaman',
+content: p.content || '',
+caption: p.caption || '',
+image: p.image || '',
+isCover: !!p.isCover,
+pageType: p.pageType || 'none',
+linkImages: Array.isArray(p.linkImages) ? p.linkImages : (p.pageType === 'link-images' ? [] : undefined),
+linkVideo: (p.linkVideo && typeof p.linkVideo === 'object') ? p.linkVideo : (p.pageType === 'link-video' ? null : undefined)
+};
+}
+function toggleToolbar() {
+toolbarCollapsed = !toolbarCollapsed;
+const toolbar = document.getElementById('toolbar');
+const btn = document.getElementById('toolbarToggleBtn');
+const label = document.getElementById('toolbarToggleLabel');
+if (!toolbar || !btn) return;
+if (toolbarCollapsed) {
+toolbar.classList.add('hidden');
+btn.classList.add('collapsed');
+label.textContent = 'Buka Menu';
+} else {
+toolbar.classList.remove('hidden');
+btn.classList.remove('collapsed');
+label.textContent = 'Tutup Menu';
+}
+try { localStorage.setItem('bk56_toolbar_collapsed', toolbarCollapsed ? '1' : '0'); } catch(e) {}
+}
+function restoreToolbarState() {
+try {
+if (localStorage.getItem('bk56_toolbar_collapsed') === '1') {
+toolbarCollapsed = true;
+const toolbar = document.getElementById('toolbar');
+const btn = document.getElementById('toolbarToggleBtn');
+const label = document.getElementById('toolbarToggleLabel');
+if (toolbar) toolbar.classList.add('hidden');
+if (btn) btn.classList.add('collapsed');
+if (label) label.textContent = 'Buka Menu';
+}
+} catch(e) {}
+}
+function toggleFocusMode() {
+focusMode = !focusMode;
+document.body.classList.toggle('focus-mode', focusMode);
+const btn = document.getElementById('floatingFocusBtn');
+const icon = document.getElementById('focusBtnIcon');
+const label = document.getElementById('focusBtnLabel');
+if (btn) btn.classList.toggle('active', focusMode);
+if (icon) icon.textContent = focusMode ? '🔓' : '🎯';
+if (label) label.textContent = focusMode ? 'Keluar Fokus' : 'Fokus';
+try { localStorage.setItem('bk56_focus_mode', focusMode ? '1' : '0'); } catch(e) {}
+showStatus(focusMode ? '🎯 Mode Fokus aktif' : '🔓 Mode Fokus nonaktif', focusMode ? 'cloud' : 'success');
+}
+function restoreFocusMode() {
+try {
+if (localStorage.getItem('bk56_focus_mode') === '1') {
+focusMode = true;
+document.body.classList.add('focus-mode');
+const btn = document.getElementById('floatingFocusBtn');
+const icon = document.getElementById('focusBtnIcon');
+const label = document.getElementById('focusBtnLabel');
+if (btn) btn.classList.add('active');
+if (icon) icon.textContent = '🔓';
+if (label) label.textContent = 'Keluar Fokus';
+}
+} catch(e) {}
+}
+function renderSlides() {
+const container = document.getElementById('slidesContainer');
+if (!container) return;
+container.innerHTML = '';
+if (!Array.isArray(pages) || pages.length === 0) {
+container.innerHTML = '<div class="slide active" style="text-align:center;padding:60px;"><h2 style="color:#c62828;">⚠️ Data Kosong</h2><p style="margin:20px 0;">Klik <b>🆘 Reset</b> untuk memuat data default.</p></div>';
+updateIndicator();
+return;
+}
+pages.forEach((page, idx) => {
+const div = document.createElement('div');
+div.className = 'slide' + (idx === currentSlide ? ' active' : '');
+div.dataset.pageIdx = idx;
+const coverClass = page.isCover ? ' cover' : '';
+let extraHtml = '';
+const pType = page.pageType || 'none';
+if (pType === 'image-slot') {
+extraHtml = `
+<div class="image-slot">
+<div class="img-display">
+${page.image ? `<img src="${page.image}" alt="Gambar ${idx+1}">` : `<p>📷 Belum ada gambar.</p>`}
+</div>
+<div contenteditable="false" class="caption">${page.caption || 'Klik untuk menambah keterangan gambar'}</div>
+<input type="file" accept="image/*" onchange="uploadImage(event, ${idx})">
+${page.image ? `<button class="remove-img" onclick="removeImage(${idx})">Hapus Gambar</button>` : ''}
+</div>`;
+}
+else if (pType === 'link-images' && Array.isArray(page.linkImages)) {
+extraHtml = `<div class="link-images-row">`;
+page.linkImages.forEach((li, liIdx) => {
+if (!li) return;
+const previewHtml = li.url
+? `<img src="${li.url}" alt="${li.title || ''}" onerror="this.outerHTML='<div class=\\'placeholder\\'>❌ Gambar tidak dapat dimuat</div>'">`
+: `<div class="placeholder">🖼️ Belum ada gambar<br><small>Klik tombol di bawah</small></div>`;
+extraHtml += `
+<div class="link-image-card ${li.position || ''}">
+<div class="card-label">📍 Posisi ${li.position === 'left' ? 'Kiri' : 'Kanan'}</div>
+<div class="card-title">${li.title || 'Gambar'}</div>
+<div class="card-preview">${previewHtml}</div>
+<div class="card-actions">
+<button class="card-btn" onclick="openLinkModal('linkImage', ${idx}, ${liIdx})">🔗 Sematkan Link Gambar</button>
+${li.url ? `<button class="card-btn danger" onclick="removeLink('linkImage', ${idx}, ${liIdx})">🗑️ Hapus</button>` : ''}
+</div>
+<div class="card-caption" contenteditable="false">${li.caption || 'Klik untuk menambah keterangan'}</div>
+</div>`;
+});
+extraHtml += `</div>`;
+}
+else if (pType === 'link-video' && page.linkVideo) {
+const lv = page.linkVideo;
+let videoHtml = '';
+if (lv.url) {
+videoHtml = `
+<video controls playsinline preload="metadata" crossorigin="anonymous"
+style="width:100%; background:#000;"
+onerror="this.outerHTML='<div class=\\'placeholder\\' style=\\'color:#fff\\'>❌ Video tidak dapat dimuat</div>'">
+<source src="${lv.url}" type="video/mp4">
+<source src="${lv.url}" type="video/webm">
+<source src="${lv.url}" type="video/ogg">
+<source src="${lv.url}">
+<div class="placeholder" style="color:#fff;">
+Browser tidak mendukung.<br>
+<a href="${lv.url}" target="_blank" style="color:#ffc107;">Buka video</a>
+</div>
+</video>`;
+} else {
+videoHtml = `<div class="placeholder">🎬 Belum ada video<br><small>Klik tombol di bawah</small></div>`;
+}
+extraHtml = `
+<div class="link-video-wrapper">
+<div class="card-label">🎥 Video Player</div>
+<div class="card-title">${lv.title || 'Video'}</div>
+<div class="video-preview">${videoHtml}</div>
+<div class="card-actions">
+<button class="card-btn" onclick="openLinkModal('linkVideo', ${idx}, 0)">🔗 Sematkan Link Video</button>
+${lv.url ? `<button class="card-btn danger" onclick="removeLink('linkVideo', ${idx}, 0)">🗑️ Hapus</button>` : ''}
+</div>
+<div class="card-caption" contenteditable="false">${lv.caption || 'Klik untuk menambah keterangan video'}</div>
+</div>`;
+}
+div.innerHTML = `
+<div class="${coverClass.trim()}">
+<div contenteditable="false" class="page-content">${page.content || ''}</div>
+${extraHtml}
+</div>`;
+container.appendChild(div);
+});
+updateIndicator();
+updateTOC();
+applyEditMode();
+}
+function updateIndicator() {
+const el = document.getElementById('pageIndicator');
+if (el) el.textContent = `Halaman ${currentSlide + 1} / ${pages.length}`;
+}
+function updateTOC() {
+const toc = document.getElementById('tocList');
+if (!toc) return;
+toc.innerHTML = '';
+if (!Array.isArray(pages)) return;
+pages.forEach((p, i) => {
+const li = document.createElement('li');
+li.textContent = `${i+1}. ${p.title || 'Halaman'}`;
+li.onclick = () => goToSlide(i);
+toc.appendChild(li);
+});
+}
+function goToSlide(i) {
+if (!Array.isArray(pages) || pages.length === 0) return;
+if (i < 0 || i >= pages.length) return;
+currentSlide = i;
+document.querySelectorAll('.slide').forEach((s, idx) => s.classList.toggle('active', idx === currentSlide));
+updateIndicator();
+window.scrollTo({top: 0, behavior: 'smooth'});
+}
+function nextPage() {
+if (!Array.isArray(pages) || pages.length === 0) return;
+if (currentSlide < pages.length - 1) goToSlide(currentSlide + 1);
+}
+function prevPage() {
+if (!Array.isArray(pages) || pages.length === 0) return;
+if (currentSlide > 0) goToSlide(currentSlide - 1);
+}
+function goToTOC() {
+if (!Array.isArray(pages) || pages.length === 0) return;
+const tocIndex = pages.findIndex(p => p && p.title === "DAFTAR ISI");
+if (tocIndex !== -1) goToSlide(tocIndex);
+}
+function toggleEdit() {
+editMode = !editMode;
+applyEditMode();
+const btn = document.getElementById('btnEdit');
+if (btn) {
+if (editMode) {
+btn.classList.add('active');
+btn.innerHTML = '🔒 Selesai Edit';
+} else {
+btn.classList.remove('active');
+btn.innerHTML = '🖊️ Mode Edit';
+saveData(true);
+}
+}
+showStatus(editMode ? '✅ Mode Edit AKTIF — klik konten untuk mengedit' : '🔒 Mode Edit NONAKTIF — data tersimpan lokal', editMode ? 'loading' : 'success');
+}
+function applyEditMode() {
+document.body.classList.toggle('edit-mode', editMode);
+document.querySelectorAll('.page-content, .caption, .card-caption').forEach(el => {
+el.setAttribute('contenteditable', editMode ? 'true' : 'false');
+});
+const btn = document.getElementById('btnEdit');
+if (btn && editMode) {
+btn.classList.add('active');
+btn.innerHTML = '🔒 Selesai Edit';
+}
+}
+function uploadImage(event, idx) {
+const file = event.target.files[0];
+if (!file || !pages[idx]) return;
+const reader = new FileReader();
+reader.onload = e => {
+pages[idx].image = e.target.result;
+saveData(true);
+renderSlides();
+showStatus('✅ Gambar tersimpan lokal. Klik "Push ke Sheet" untuk upload.', 'success');
+};
+reader.readAsDataURL(file);
+}
+function removeImage(idx) {
+if (!confirm("Hapus gambar?") || !pages[idx]) return;
+pages[idx].image = ""; pages[idx].caption = "";
+saveData(true);
+renderSlides();
+showStatus('✅ Gambar dihapus. Klik "Push ke Sheet" untuk sync.', 'success');
+}
+function openLinkModal(type, pageIdx, keyIdx) {
+currentEditTarget = { type, pageIdx, keyIdx };
+const page = pages[pageIdx];
+if (!page) return;
+let currentUrl = '', currentCaption = '', title = '';
+if (type === 'linkImage' && page.linkImages && page.linkImages[keyIdx]) {
+const li = page.linkImages[keyIdx];
+currentUrl = li.url; currentCaption = li.caption;
+title = `Sematkan Link Gambar - ${li.title || ''}`;
+document.getElementById('modalHint').innerHTML = '💡 Tempelkan URL gambar (JPG, PNG, GIF, WEBP).';
+document.getElementById('modalUrl').placeholder = 'https://contoh.com/gambar.jpg';
+} else if (type === 'linkVideo' && page.linkVideo) {
+const lv = page.linkVideo;
+currentUrl = lv.url; currentCaption = lv.caption;
+title = `Sematkan Link Video - ${lv.title || ''}`;
+document.getElementById('modalHint').innerHTML = '💡 Tempelkan URL video (MP4, WebM, OGG).';
+document.getElementById('modalUrl').placeholder = 'https://contoh.com/video.mp4';
+}
+document.getElementById('modalTitle').textContent = title;
+document.getElementById('modalUrl').value = currentUrl || '';
+document.getElementById('modalCaption').value = currentCaption || '';
+document.getElementById('modalOverlay').classList.add('show');
+setTimeout(() => document.getElementById('modalUrl').focus(), 100);
+}
+function closeModal() {
+document.getElementById('modalOverlay').classList.remove('show');
+currentEditTarget = null;
+}
+function saveLink() {
+if (!currentEditTarget) return;
+const { type, pageIdx, keyIdx } = currentEditTarget;
+const url = document.getElementById('modalUrl').value.trim();
+const caption = document.getElementById('modalCaption').value.trim();
+if (!url) { alert("URL tidak boleh kosong!"); return; }
+if (type === 'linkImage') {
+if (pages[pageIdx] && pages[pageIdx].linkImages && pages[pageIdx].linkImages[keyIdx]) {
+pages[pageIdx].linkImages[keyIdx].url = url;
+pages[pageIdx].linkImages[keyIdx].caption = caption;
+}
+} else if (type === 'linkVideo') {
+if (pages[pageIdx] && pages[pageIdx].linkVideo) {
+pages[pageIdx].linkVideo.url = url;
+pages[pageIdx].linkVideo.caption = caption;
+}
+}
+saveData(true);
+closeModal();
+renderSlides();
+showStatus('✅ Link tersimpan lokal. Klik "Push ke Sheet" untuk upload.', 'success');
+}
+function removeLink(type, pageIdx, keyIdx) {
+if (!confirm("Hapus link?")) return;
+if (type === 'linkImage') {
+if (pages[pageIdx] && pages[pageIdx].linkImages && pages[pageIdx].linkImages[keyIdx]) {
+pages[pageIdx].linkImages[keyIdx].url = '';
+pages[pageIdx].linkImages[keyIdx].caption = '';
+}
+} else if (type === 'linkVideo') {
+if (pages[pageIdx] && pages[pageIdx].linkVideo) {
+pages[pageIdx].linkVideo.url = '';
+pages[pageIdx].linkVideo.caption = '';
+}
+}
+saveData(true);
+renderSlides();
+showStatus('✅ Link dihapus. Klik "Push ke Sheet" untuk sync.', 'success');
+}
+function addPage() {
+const title = prompt("Judul halaman baru:", "Halaman Baru") || "Halaman Baru";
+pages.push({ title, content: `<h2>${title}</h2><p>Tulis konten...</p>`, image: "", caption: "", pageType: "image-slot" });
+saveData(true);
+renderSlides();
+goToSlide(pages.length - 1);
+showStatus('✅ Halaman ditambahkan. Klik "Push ke Sheet" untuk upload.', 'success');
+}
+function deletePage() {
+if (pages.length <= 1) { alert("Minimal 1 halaman."); return; }
+if (!confirm(`Hapus halaman "${pages[currentSlide].title}"?`)) return;
+pages.splice(currentSlide, 1);
+if (currentSlide >= pages.length) currentSlide = pages.length - 1;
+saveData(true);
+renderSlides();
+showStatus('✅ Halaman dihapus. Klik "Push ke Sheet" untuk sync.', 'success');
+}
+function collectContent() {
+if (!Array.isArray(pages)) return;
+document.querySelectorAll('.slide').forEach((slide, idx) => {
+if (!pages[idx]) return;
+const contentEl = slide.querySelector('.page-content');
+const captionEl = slide.querySelector('.caption');
+if (contentEl) pages[idx].content = contentEl.innerHTML;
+if (captionEl) pages[idx].caption = captionEl.innerText;
+if (pages[idx].pageType === 'link-images' && pages[idx].linkImages) {
+slide.querySelectorAll('.link-image-card .card-caption').forEach((capEl, i) => {
+if (pages[idx].linkImages[i]) pages[idx].linkImages[i].caption = capEl.innerText;
+});
+}
+if (pages[idx].pageType === 'link-video' && pages[idx].linkVideo) {
+const capEl = slide.querySelector('.link-video-wrapper .card-caption');
+if (capEl) pages[idx].linkVideo.caption = capEl.innerText;
+}
+});
+}
+function saveData(silent) {
+collectContent();
+try {
+localStorage.setItem('bk56_presentasi', JSON.stringify(pages));
+if (!silent) showStatus('✅ Data tersimpan lokal', 'success');
+} catch(e) {
+showStatus('❌ Gagal simpan: ' + e.message, 'error');
+}
+}
+function forceReset() {
+if (!confirm("🆘 RESET akan menghapus SEMUA data lokal dan memuat data default. Lanjutkan?")) return;
+try {
+localStorage.removeItem('bk56_presentasi');
+sessionStorage.clear();
+} catch(e) {}
+pages = JSON.parse(JSON.stringify(defaultPages));
+currentSlide = 0;
+editMode = false;
+renderSlides();
+showStatus('✅ Data direset ke default', 'success');
+}
+function showStatus(msg, type) {
+const el = document.getElementById('syncStatus');
+if (!el) return;
+el.textContent = msg;
+el.className = 'sync-status show ' + type;
+clearTimeout(window._statusTimer);
+window._statusTimer = setTimeout(() => el.classList.remove('show'), 4500);
+}
+function pullFromSheet() {
+if (!APPS_SCRIPT_URL || !APPS_SCRIPT_URL.startsWith('https://script.google.com/')) {
+alert('⚠️ URL Apps Script belum dikonfigurasi.');
+return;
+}
+if (!confirm('🔄 Muat data dari Google Sheet?\n⚠️ Data lokal saat ini akan DIGANTI dengan data dari Sheet.')) return;
+showStatus('☁️ Mengambil data dari Sheet...', 'cloud');
+console.group('🔍 DEBUG pullFromSheet');
+fetch(APPS_SCRIPT_URL + '?action=getAll&t=' + Date.now(), { method: 'GET', cache: 'no-store' })
+.then(res => {
+console.log('1️⃣ HTTP Status:', res.status);
+if (!res.ok) throw new Error('HTTP ' + res.status);
+return res.text();
+})
+.then(text => {
+console.log('2️⃣ Response mentah (500 char pertama):', text.substring(0, 500));
+let data;
+try { data = JSON.parse(text); }
+catch (e) { throw new Error('Response bukan JSON. Isi: ' + text.substring(0, 200)); }
+console.log('3️⃣ JSON parsed, keys:', Object.keys(data));
+console.log('4️⃣ data.pages:', data.pages);
+console.log('5️⃣ data.cards:', data.cards);
+if (!data || data.success === false) {
+throw new Error('Server error: ' + (data && data.error || 'unknown'));
+}
+const serverPages = Array.isArray(data.pages) ? data.pages : [];
+const serverCards = Array.isArray(data.cards) ? data.cards : [];
+console.log('6️⃣ serverPages.length:', serverPages.length);
+console.log('7️⃣ serverCards.length:', serverCards.length);
+if (serverPages.length === 0 && serverCards.length === 0) {
+showStatus('ℹ️ Sheet kosong — tidak ada data yang dimuat', 'loading');
+console.warn('⚠️ Sheet kosong!');
+console.groupEnd();
+return;
+}
+if (serverPages.length > 0) {
+serverPages.sort((a, b) => (Number(a.pageIdx) || 0) - (Number(b.pageIdx) || 0));
+console.log('8️⃣ Testing normalizePage pada halaman pertama:');
+console.log('   Input:', serverPages[0]);
+console.log('   Output:', normalizePage(serverPages[0]));
+const validPages = serverPages.map(normalizePage).filter(p => p !== null);
+console.log('9️⃣ validPages.length:', validPages.length, 'dari', serverPages.length);
+if (validPages.length > 0) {
+pages = validPages;
+console.log('✅ pages berhasil di-reassign');
+} else {
+console.error('❌ validPages KOSONG! normalizePage mengembalikan null semua.');
+}
+}
+if (serverCards.length > 0) {
+serverCards.forEach(sc => {
+if (!sc || !sc.cardId) return;
+pages.forEach(page => {
+if (page.linkImages) {
+const lc = page.linkImages.find(c => c.id === sc.cardId);
+if (lc) { lc.url = sc.url || ''; lc.caption = sc.caption || ''; }
+}
+if (page.linkVideo && page.linkVideo.id === sc.cardId) {
+page.linkVideo.url = sc.url || ''; page.linkVideo.caption = sc.caption || '';
+}
+});
+});
+}
+if (currentSlide >= pages.length) currentSlide = 0;
+try {
+localStorage.setItem('bk56_presentasi', JSON.stringify(pages));
+console.log('💾 Data Sheet tersimpan ke localStorage (bypass collectContent)');
+} catch(e) {
+console.error('Gagal simpan localStorage:', e);
+}
+renderSlides();
+showStatus(`✅ BERHASIL! ${pages.length} halaman dimuat dari Sheet`, 'success');
+console.groupEnd();
+})
+.catch(err => {
+console.error('❌ Pull error:', err);
+console.groupEnd();
+showStatus('❌ Gagal muat: ' + err.message, 'error');
+});
+}
+function initApp() {
+try {
+const saved = localStorage.getItem('bk56_presentasi');
+if (saved) {
+try {
+const parsed = JSON.parse(saved);
+if (Array.isArray(parsed) && parsed.length > 0) {
+pages = parsed.map(normalizePage).filter(p => p !== null);
+}
+} catch (e) {
+console.warn('localStorage corrupt, using default:', e);
+}
+}
+if (!Array.isArray(pages) || pages.length === 0) {
+pages = JSON.parse(JSON.stringify(defaultPages));
+}
+currentSlide = 0;
+renderSlides();
+restoreToolbarState();
+restoreFocusMode();
+showStatus('✅ Aplikasi siap digunakan', 'success');
+} catch (err) {
+console.error('INIT ERROR:', err);
+pages = JSON.parse(JSON.stringify(defaultPages));
+currentSlide = 0;
+renderSlides();
+}
+}
+if (document.readyState === 'loading') {
+document.addEventListener('DOMContentLoaded', initApp);
+} else {
+initApp();
+}
+document.addEventListener('keydown', e => {
+if (e.target.getAttribute('contenteditable') === 'true') return;
+if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+if (e.key === 'ArrowRight') nextPage();
+if (e.key === 'ArrowLeft') prevPage();
+if (e.key === 'Home') goToTOC();
+if (e.key === 'Escape') closeModal();
+if (e.key === 't' || e.key === 'T') { e.preventDefault(); toggleToolbar(); }
+if (e.key === 'f' || e.key === 'F') { e.preventDefault(); toggleFocusMode(); }
+});
+function pushToSheet() {
+console.group('🔍 DEBUG pushToSheet');
+if (!APPS_SCRIPT_URL || !APPS_SCRIPT_URL.startsWith('https://script.google.com/')) {
+console.error('❌ URL Apps Script tidak valid');
+console.groupEnd();
+alert('⚠️ URL Apps Script belum dikonfigurasi.');
+return;
+}
+console.log('1️⃣ URL OK');
+if (!confirm('☁️ Push semua data ke Google Sheet?\nData lokal akan diupload ke cloud.')) {
+console.log('2️⃣ Dibatalkan user');
+console.groupEnd();
+return;
+}
+console.log('2️⃣ Confirmed');
+try {
+collectContent();
+console.log('3️⃣ collectContent() OK, pages.length =', pages.length);
+} catch(e) {
+console.error('❌ collectContent error:', e);
+console.groupEnd();
+showStatus('❌ collectContent error: ' + e.message, 'error');
+return;
+}
+showStatus('☁️ Mengupload data ke Sheet...', 'cloud');
+console.log('4️⃣ Memulai fetch POST...');
+fetch(APPS_SCRIPT_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+body: JSON.stringify({
+action: 'saveAll',
+pages: pages.map((p, i) => ({
+pageIdx: i,
+title: p.title || '',
+content: p.content || '',
+caption: p.caption || '',
+image: p.image || '',
+isCover: !!p.isCover,
+pageType: p.pageType || 'none',
+linkImages: p.linkImages || [],
+linkVideo: p.linkVideo || null
+})),
+timestamp: new Date().toISOString()
+})
+})
+.then(() => {
+console.log('5️⃣ Fetch BERHASIL');
+showStatus('✅ BERHASIL! Data sudah tersimpan di Google Sheet', 'success');
+console.groupEnd();
+})
+.catch(err => {
+console.error('❌ Fetch ERROR:', err);
+showStatus('❌ Gagal push: ' + err.message, 'error');
+console.groupEnd();
+});
+}
+</script>
+</body>
+</html>
